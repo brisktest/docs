@@ -41,7 +41,7 @@ const navigation = [
     links: [
       { title: 'Running on Github Actions', href: '/docs/running-on-github-actions' },
       { title: 'Running on Bitbucket', href: '/docs/running-on-bitbucket' },
-      { title: 'Running on CircleCi', href: '/docs/running-on-circleci' },
+      { title: 'Running on CircleCI', href: '/docs/running-on-circleci' },
       { title: 'Running on AWS Codepipeline', href: '/docs/running-on-aws-codepipeline' },
      
     ],
