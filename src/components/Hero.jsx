@@ -59,9 +59,9 @@ export function Hero() {
                 Harness the power of massive concurrency without rebuilding your workers every test run.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                <Button href="/">Get started</Button>
-                <Button href="/" variant="secondary">
-                  View on GitHub
+                <Button href="/#install-the-cli">Get started</Button>
+                <Button href="https://brisktest.com/pricing/" variant="secondary">
+                  Sign up
                 </Button>
               </div>
             </div>

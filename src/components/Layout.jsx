@@ -100,7 +100,7 @@ function Header({ navigation }) {
         <MobileNavigation navigation={navigation} />
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
-        <Link href="/" aria-label="Home page">
+        <Link href="https://brisktest.com/" aria-label="Home page">
           {/* <Logomark className="h-9 w-9 lg:hidden" /> */}
           <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-sky-100 lg:block" />
         </Link>
@@ -110,10 +110,12 @@ function Header({ navigation }) {
       </div>
       <div className="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
         <ThemeSelector className="relative z-10" />
-        <Link href="https://github.com/brisktest" className="group" aria-label="GitHub">
+        {/* <Link href="https://github.com/brisktest" className="group" aria-label="GitHub">
           <GitHubIcon className="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
-        </Link>
-      </div>
+        </Link> */}
+        <span className="h-6 w-6">
+          </span>
+          </div>
     </header>
   )
 }
