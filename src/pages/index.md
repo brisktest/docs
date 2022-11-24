@@ -61,6 +61,10 @@ You can add this brisk.json file to your .gitignore , later when we run this in 
 
 A straightforward project may run correctly using a default project file, but many users will need to edit the brisk.json file with custom configuration for their project.
 
+{% callout title="Configuring Your Project" %}
+To see more info on editing the brisk.json file, and to see specific examples for different frameworks, see framework sections in the sidebar on the left.
+{% /callout %}
+
 ## Build Commands
 
 The build commands are sequence of commands that need to be run to set up your test environment. They are the things you do once in your local environment like setting up your database, choosing a node or ruby version, installing packages etc. They are run one time per worker, subsequent test runs don't run the build commands.
