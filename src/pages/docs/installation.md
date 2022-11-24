@@ -1,71 +1,82 @@
 ---
 title: Installation
-description: Quidem magni aut exercitationem maxime rerum eos.
+description: Installing the Command Line Interface CLI version of Brisk
 ---
 
-Quasi sapiente voluptates aut minima non doloribus similique quisquam. In quo expedita ipsum nostrum corrupti incidunt. Et aut eligendi ea perferendis.
+Brisk communicates with our servers using a Command Line Interface (CLI). There are two main ways to run Brisk, one locally from your developer machine (to run your test suite per-commit) and the other as part of your CI/CD pipeline. So there are two main installation methods. The first is a manual one using your web browser and the second a more automated one suitable for use in your CI/CD automation.
 
 ---
 
-## Quis vel iste dicta
+## Download Using Web Browser
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+Navigate to <https://brisktest.com/download> and select the relevant binary for your architecture and OS. Linux and OSX binaries are available. Windows builds are currently experimental, let us know if you would like access to the latest build.
 
-### Et pariatur ab quas
+### Adding the binary to the path
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+In order for the binary to be available from the command line you must add the binary to your path. The simplest way to do that is by moving it to /usr/local/bin directory.
 
-```js
-/** @type {import('@tailwindlabs/lorem').ipsum} */
-export default {
-  lorem: 'ipsum',
-  dolor: ['sit', 'amet', 'consectetur'],
-  adipiscing: {
-    elit: true,
-  },
-}
+### Updating the Binary
+
+Once you have installed the binary on your system, if you need to update, running
+
+```shell
+brisk update
 ```
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+updates to the latest version.
 
-### Natus aspernatur iste
+## Install on CI/CD pipelines
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+### Github Actions
 
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+For a Github action the easiest way to install Brisk is using the custom action which is available in the Github marketplace.
 
----
+```yml
+name: Brisk CI
+on: [push]
+jobs:
+  Brisk-CI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install Brisk
+        uses: brisktest/setup-brisk@v1.1
+        with:
+          brisk_version: 'latest'
+          api_token: '${{ secrets.BRISK_APITOKEN }}'
+          api_key: '${{ secrets.BRISK_APIKEY }}'
+          config_file: 'brisk-ci.json'
+      - name: Run Brisk
+        run: brisk
+```
 
-## Quos porro ut molestiae
+### Direct download with curl
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
+For other pipelines you can download and install brisk as part of the setup.
 
-### Voluptatem quas possimus
+```shell
+curl "https://update.brisktest.com/brisk/latest/linux-amd64/brisk" -o brisk
+chmod +x brisk
+```
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
+### Bitbucket Example
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+Here is a complete example from a Bitbucket Pipeline (for a Python project)
 
-### Id vitae minima
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
-
----
-
-## Vitae laborum maiores
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Corporis exercitationem
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-### Reprehenderit magni
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-Voluptas beatae omnis omnis voluptas. Cum architecto ab sit ad eaque quas quia distinctio. Molestiae aperiam qui quis deleniti soluta quia qui. Dolores nostrum blanditiis libero optio id. Mollitia ad et asperiores quas saepe alias.
+```yaml
+pipelines:
+  default:
+    - step:
+        name: Run API tests
+        script:
+          - apt-get update
+          - apt-get install -y rsync
+          - curl "https://update.brisktest.com/brisk/latest/linux-amd64/brisk" -o brisk
+          - chmod +x brisk
+          - pip install .
+          - export BRISK_APITOKEN="${BRISK_APITOKEN}"
+          - export BRISK_APIKEY="${BRISK_APIKEY}"
+          - export BRISK_CI=true
+          - ./brisk
+```

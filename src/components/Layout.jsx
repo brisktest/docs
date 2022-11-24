@@ -20,50 +20,47 @@ const navigation = [
     ],
   },
   {
-    title: 'Core concepts',
+    title: 'Running Brisk',
     links: [
-      { title: 'Understanding caching', href: '/docs/understanding-caching' },
+      { title: 'Using the CLI', href: '/docs/using-the-cli' },
       {
-        title: 'Predicting user behavior',
-        href: '/docs/predicting-user-behavior',
+        title: 'CLI Commands',
+        href: '/docs/cli-commands',
       },
-      { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
+      { title: 'Config File', href: '/docs/config-file' },
       {
-        title: 'Introduction to string theory',
-        href: '/docs/introduction-to-string-theory',
+        title: 'CLI Environment Variables',
+        href: '/docs/cli-environment-variables',
       },
-      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+      { title: 'Typical Workflow', href: '/docs/cli-typical-workflow' },
     ],
   },
   {
-    title: 'Advanced guides',
+    title: 'Running in CI',
     links: [
-      { title: 'Writing plugins', href: '/docs/writing-plugins' },
-      { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
-      { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
-      { title: 'Testing', href: '/docs/testing' },
-      { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
-      {
-        title: 'Predictive data generation',
-        href: '/docs/predictive-data-generation',
-      },
+      { title: 'Running on Github Actions', href: '/docs/running-on-github-actions' },
+      { title: 'Running on Bitbucket', href: '/docs/running-on-bitbucket' },
+      { title: 'Running on CircleCi', href: '/docs/running-on-circleci' },
+      { title: 'Running on AWS Codepipeline', href: '/docs/running-on-aws-codepipeline' },
+     
     ],
   },
   {
-    title: 'API reference',
+    title: 'Frameworks',
     links: [
-      { title: 'CacheAdvance.predict()', href: '/docs/cacheadvance-predict' },
-      { title: 'CacheAdvance.flush()', href: '/docs/cacheadvance-flush' },
-      { title: 'CacheAdvance.revert()', href: '/docs/cacheadvance-revert' },
-      { title: 'CacheAdvance.regret()', href: '/docs/cacheadvance-regret' },
+      { title: 'Node - Jest', href: '/docs/frameworks-jest' },
+      { title: 'Rails - Rspec', href: '/docs/frameworks-rails-rspec' },
+      { title: 'Rails - Minitest', href: '/docs/frameworks-rails-minitest' },
+      { title: 'Python - Pytest', href: '/docs/frameworks-python-pytest' },
+      { title: 'Raw', href: '/docs/frameworks-raw' },
+      { title: 'Others', href: '/docs/frameworks-others' },
     ],
   },
   {
-    title: 'Contributing',
+    title: 'Working with Teams',
     links: [
-      { title: 'How to contribute', href: '/docs/how-to-contribute' },
-      { title: 'Architecture guide', href: '/docs/architecture-guide' },
-      { title: 'Design principles', href: '/docs/design-principles' },
+      { title: 'Getting started with teams', href: '/docs/getting-started-with-teams' },
+
     ],
   },
 ]
@@ -104,7 +101,7 @@ function Header({ navigation }) {
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
         <Link href="/" aria-label="Home page">
-          <Logomark className="h-9 w-9 lg:hidden" />
+          {/* <Logomark className="h-9 w-9 lg:hidden" /> */}
           <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-sky-100 lg:block" />
         </Link>
       </div>
@@ -113,7 +110,7 @@ function Header({ navigation }) {
       </div>
       <div className="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
         <ThemeSelector className="relative z-10" />
-        <Link href="https://github.com" className="group" aria-label="GitHub">
+        <Link href="https://github.com/brisktest" className="group" aria-label="GitHub">
           <GitHubIcon className="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
         </Link>
       </div>
