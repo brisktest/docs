@@ -35,6 +35,14 @@ Here is are some example build commands. In this rails project we use docker-com
   ],
 ```
 
+
+{% callout title="Changing Build Commands" %}
+Although we make a best effort to detect changes to build commands, in certain circumstances (for example in CI mode) when you change build commands you may need to clear your workers for a project. Run the command 
+```shell
+brisk workers clear
+```
+to clear the workers for the current project.
+{% /callout %}
 ## Test Commands
 
 Test commands are the commands that must be run to run the tests. This is usually a test command such as `npm test` or `yarn test`. The test commands are run in the order they are specified in the config file.
