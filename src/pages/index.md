@@ -34,7 +34,7 @@ Download the relevant CLI binary for your architecture from the [downloads](http
 
 ## Sign up for an Account
 
-If you haven't done so already, now would be a good time to create an account on [brisktest](brisktest.com). Don't forget to confirm the email to verify your account.
+If you haven't done so already, now would be a good time to create an account on [brisktest](https://brisktest.com). Don't forget to confirm the email to verify your account.
 
 ## Sign in with the CLI
 

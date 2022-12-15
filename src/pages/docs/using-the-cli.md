@@ -3,7 +3,7 @@ title: Using the CLI
 description: Using the Command Line Interface CLI version of Brisk
 ---
 
-Brisk communicates with our servers using a Command Line Interface (CLI). There are two main ways to run Brisk, one locally from your developer machine (to run your test suite per-commit) and the other as part of your CI/CD pipeline. In this article we will cover the CLI usage from your local terminal. For more information on how to use Brisk in your CI/CD pipeline see [Using Brisk in CI/CD](/docs/using-brisk-in-ci-cd).
+Brisk communicates with our servers using a Command Line Interface (CLI). There are two main ways to run Brisk, one locally from your developer machine (to run your test suite per-commit) and the other as part of your CI/CD pipeline. In this article we will cover the CLI usage from your local terminal. For more information on how to use Brisk in your CI/CD pipeline see [Using Brisk in CI/CD](/docs/running-on-github-actions).
 
 ---
 
