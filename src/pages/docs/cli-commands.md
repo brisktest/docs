@@ -81,7 +81,7 @@ This command manages the brisk config. At present it only supports the `print` c
 
 This command will open a browser window and allow you to login to Brisk. It will then store your credentials in the credentials file. You will remain logged in until you log out by deleting the credentials file or logging in with a different account.
 
-### brisk project
+### brisk project init
 
 Used to manage your project.
 
@@ -102,6 +102,9 @@ Available Commands:
   raw         Used to initialize a new Brisk project
 
 ```
+### brisk project list
+
+Used to list all projects for this user. Outputs project token and framework.
 
 ### brisk update
 

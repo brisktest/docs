@@ -74,7 +74,6 @@ pipelines:
           - apt-get install -y rsync
           - curl "https://update.brisktest.com/brisk/latest/linux-amd64/brisk" -o brisk
           - chmod +x brisk
-          - pip install .
           - export BRISK_APITOKEN="${BRISK_APITOKEN}"
           - export BRISK_APIKEY="${BRISK_APIKEY}"
           - export BRISK_CI=true
