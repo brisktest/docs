@@ -25,9 +25,7 @@ There are a number of environment variables that can be used to configure the Br
 | BRISK_NOREBUILD              | Never rebuild the project if we detect it needs to be rebuilt. Defaults to false.                                                                                                                                                      |
 | BRISK_HASHFILEPATH           | The path to the hash file. Defaults to .rebuild_hash.                                                                                                                                                                                  |
 | BRISK_REBUILDWATCHPATHS      | A comma separated list of paths to watch for changes. (overrides the contents of brisk.json)                                                                                                                                           |
-| BRISK_APIENDPOINT            | The API endpoint to use. Defaults to api.brisktest.com:50052.                                                                                                                                                                          |
-| BRISK_LOG_LEVEL              | The log level to use. Defaults to error, possible values are debug, info, warning, error, dpanic, panic, and fatal.                                                                                                                                                            |
-
-| BRISK_LOG_FILE              | The log file to use. Defaults to /tmp/brisk.log                                                                                                                                                            |
-
-| BRISK_AFFINITY_ENV_VAR              | An environment variable that links similar test runs in this project. Usually this env var contains the current branch name e.g. BRISK_AFFINITY_ENV_VAR=CI_COMMIT_REF_NAME (in Gitlab)                                                                                                                                                       |
+| BRISK_APIENDPOINT            | The API endpoint to use. Defaults to api.brisktest.com:50052                                     
+| BRISK_LOG_LEVEL              | The log level to use. Defaults to error, possible values are debug, info, warning, error, dpanic, panic, and fatal.                                       
+| BRISK_LOG_FILE              | The log file to use. Defaults to /tmp/brisk.log
+| BRISK_AFFINITY_ENV_VAR              | An environment variable that links similar test runs in this project. Usually this env var contains the current branch name e.g. BRISK_AFFINITY_ENV_VAR=CI_COMMIT_REF_NAME (in Gitlab)
