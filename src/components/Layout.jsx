@@ -21,6 +21,21 @@ const navigation = [
     ],
   },
   {
+    title: 'CI/CD Quick Start Guides',
+    links: [
+      { title: 'Gitlab & Jest  ', href: '/docs/jest-and-gitlab' },
+      {
+        title: 'Github Actions & Rails ',
+        href: '/docs/rails-on-github-actions',
+      },
+      { title: 'Bitbucket & Pytest', href: '/docs/pytest-on-bitbucket' },
+      {
+        title: 'Other CI/CD Providers and Frameworks',
+        href: '/docs/other-frameworks',
+      }
+    ],
+  },
+  {
     title: 'Running Brisk',
     links: [
       { title: 'Using the CLI', href: '/docs/using-the-cli' },
@@ -44,7 +59,7 @@ const navigation = [
       { title: 'Running on CircleCI', href: '/docs/running-on-circleci' },
       { title: 'Running on Gitlab', href: '/docs/running-on-gitlab' },
       { title: 'Running on AWS Codepipeline', href: '/docs/running-on-aws-codepipeline' },
-     
+
     ],
   },
   {
@@ -70,7 +85,7 @@ const navigation = [
 function BriskIcon(props) {
   return (
       <Image  height="1" width="135" className="h-6 w-auto" src="/images/icon-standard-color-rgb.svg" alt="Brisk Icon" />
-  
+
   )
 }
 
