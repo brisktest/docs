@@ -23,6 +23,7 @@ const navigation = [
   {
     title: 'CI/CD Quick Start Guides',
     links: [
+      { title: 'Guides', href: '/docs/quick-start-guides' },
       { title: 'Gitlab & Jest  ', href: '/docs/jest-and-gitlab' },
       {
         title: 'Github Actions & Rails ',
@@ -116,7 +117,7 @@ function Header({ navigation }) {
         <MobileNavigation navigation={navigation} />
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
-        <Link href="/" aria-label="Home page">
+        <Link href="https://brisktest.com" aria-label="Home page">
           {/* <Logomark className="h-9 w-9 lg:hidden" /> */}
           <Logo className="hidden h-9 w-auto fill-slate-700 dark:fill-sky-100 lg:block" />
         </Link>
