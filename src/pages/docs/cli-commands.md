@@ -130,3 +130,4 @@ Use this command to interact with your Brisk workers. At present you are able to
 ```
 
 Clears the workers for the current project.
+
