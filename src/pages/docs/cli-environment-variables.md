@@ -31,3 +31,6 @@ There are a number of environment variables that can be used to configure the Br
 | BRISK_AFFINITY_ENV_VAR              | An environment variable that links similar test runs in this project. Usually this env var contains the current branch name e.g. BRISK_AFFINITY_ENV_VAR=CI_COMMIT_REF_NAME (in Gitlab)
 | BRISK_LIST_TESTS_COMMAND              | An environment variable that overrides the list test command in the brisk.json file for the current project.
 | BRISK_TEST_COMMAND              | An environment variable that overrides the test command in the brisk.json file for the current project.
+
+| BRISK_FILES | An environment variable that can be used to give a list of test files that should be run instead of using the list test command, can also be passed as a config option or used with the -f flag
+| BRISK_INTERACTIVE | An environment variable that can be used to run the CLI in interactive mode instead of the default non-interactive mode, allows you to rerun, watch etc.

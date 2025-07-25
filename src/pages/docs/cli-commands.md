@@ -31,6 +31,7 @@ Available Commands:
 Flags:
   -c, --config string        project config file (default "brisk.json")
   -a, --credentials string   brisk credentials file (default "$HOME/.config/brisk/config.toml")
+  -f, --files stringArray    test files to run instead of running the list test command
   -h, --help                 help for brisk
   -w, --watch                should brisk watch for local changes (default true)
 
@@ -47,6 +48,7 @@ brisk is the command we use to run Brisk locally. Running brisk without argument
 | ------------------------ | ------------------------------------------------------------------ |
 | -c, --config string      | project config file (default "brisk.json")                         |
 | -a, --credentials string | brisk credentials file (default "$HOME/.config/brisk/config.toml") |
+| -f, --files stringArray  | test files to run instead of running the list test command         |
 | -h, --help               | help for brisk                                                     |
 | -w, --watch              | should brisk watch for local changes (default true)                |
 
@@ -108,7 +110,12 @@ Used to list all projects for this user. Outputs project token and framework.
 
 ### brisk update
 
-This command will update brisk to the latest version. It will download the latest version and replace the current binary. It will then exit.
+This command will update brisk to the latest version. It will download the latest version and replace the current binary. It will then exit. 
+
+Depending on your system and if you have write access to where you initially installed brisk you may need to run this command with `sudo` or as an administrator.
+
+```shellscript
+❯ sudo brisk update
 
 ### brisk version
 
